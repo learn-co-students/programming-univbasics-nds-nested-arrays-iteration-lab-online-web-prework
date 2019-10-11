@@ -29,13 +29,16 @@ def total_even_pairs(src)
   # this!
   src = [ :n1[5, 4], :n2[6, 9], :n3[1,1] ]
   if  n1%1==0 && n1.to_i.even?
-    puts n1
+    total1 = n1[0]+n1[1]
+    puts total1
     elsif 
     n%1==0 && n2.to_i.even?
-    puts n2
+    total2 = n2[0]+n2[1]
+    puts total2
     elsif 
     n%1==0 && n3.to_i.even?
-    puts n3
+    total3 = n3[0]+n1[1]
+    puts total3
   else NIL
     
 end
