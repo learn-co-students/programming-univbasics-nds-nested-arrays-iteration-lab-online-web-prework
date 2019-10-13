@@ -1,4 +1,23 @@
+require 'pry'
+
 def join_ingredients(src)
+      new_array = []
+
+    src.each do |elem1|
+      new_array << ("I love #{elem1[0]} and #{elem1[1]} on my pizza" )
+      #binding.pry
+    end
+    new_array
+end 
+
+
+
+
+
+# make new array
+# put into that new array of strings that takes in first two elements
+# needs to increment up for each pair of  first elements of the new array that was joined
+
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
   # Build a new Array that contains strings where each pair of foods is
@@ -6,7 +25,9 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
-end
+#binding.pry
+
+
 
 def find_greater_pair(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
