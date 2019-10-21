@@ -26,9 +26,9 @@ end
 
 
 def total_even_pairs(src)
- 
+ new_array = []
   if scr.even? == true
-    scr.sum
+  new_array << scr.sum 
   end
 end
 
