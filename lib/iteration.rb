@@ -6,53 +6,42 @@
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
-  def join_ingredients(src)
-    row_index = 0
-    inner_result = []
-    result = []
-    while row_index < src.count do
-      element_index = 0
-      while element_index < src[row_index].count do
-        inner_result << src[row_index][element_index]
-        element_index += 1
-        end
-      result <<  "I love " + inner_result[0] +" and " + inner_result[1] + " on my pizza"
-      inner_result = []
-      row_index += 1
-    end
-    return result
-  end
-
-def find_greater_pair(src)
-  outer_results = []
+  
+def join_ingredients(src)
   row_index = 0
-  while row_index < src.count do
+  result = []
+  while row_index < src.length do
     element_index = 0
-    inner_results = []
-      while element_index < src[row_index].count do
-      inner_results << src[row_index][element_index]
-      element_index += 1
+    inner_array_element = []
+    while element_index < src[row_index].length do
+      inner_array_element << src[row_index][element_index]
+      element_index += 1 
+    end
+    result << "I love " + inner_array_element[0] + " and " + inner_array_element[1] + " on my pizza"
+    inner_array_element = []
+    row_index += 1 
   end
-  outer_results << inner_results.max
-  row_index += 1
-end
-outer_results
+    result
 end
   
-  # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
-  # Produce a new Array that contains the larger number of each of the pairs
-  # that are in the inner Arrays
-
-def total_even_pairs(src)
-  total = 0
-  row_index = 0
+# src will be an array of [ [number1, number2], ... [numberN, numberM] ]
+# Produce a new Array that contains the larger number of each of the pairs
+# that are in the inner Arrays  
+  
+def find_greater_pair(src)
+  row_index = 0 
+  new_array = []
   while row_index < src.count do
-    if src[row_index][0] % 2 == 0 && src[row_index][1] % 2 == 0 
-      total += src[row_index][0] + src[row_index][1]
+    element_index = 0 
+    inner_array = []
+    while element_index < src[row_index].count do
+      inner_array << src[row_index][element_index]
+      element_index += 1
     end
-  row_index += 1
-end
-total
+    new_array << inner_array.max
+    row_index += 1 
+  end
+  new_array
 end
 
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
@@ -64,16 +53,15 @@ end
   # this!
 
 
-# evens = array.reduce(0) do |result, value|
-#  p "#{result} #{value}"
-#  value % 2 == 0 ? result + value : result
 
-#while idx < array.length
-#  if array[idx] % 2 == 0  # conditional using modulo operator
-#    puts array[idx]       # puts out even number
-#  end
-#  idx += 1
-#end
-
-
-
+def total_even_pairs(src)
+  total = 0 
+  row_index = 0 
+  while row_index < src.length do
+    if src[row_index][0] % 2 == 0 && src[row_index][1] % 2 == 0 
+      total += src[row_index][0] + src[row_index][1]
+    end
+  row_index += 1 
+end
+total
+end
