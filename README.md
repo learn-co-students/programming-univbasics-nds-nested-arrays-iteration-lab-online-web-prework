@@ -1,7 +1,3 @@
-# Nested Data Structures: Printing and Coalescing Data
-
-## Learning Goals
-
 * Display the cells in an `Array` of `Array`s
 * Traverse `Array` of `Array`s to produce a single value
 * Traverse `Array` of `Array`s to produce a new nested data structure
