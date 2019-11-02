@@ -1,30 +1,16 @@
-def join_ingredients(src)
-  array_1 = [
-  ['pepperoni', 'sausage'],
-  ['green olives', 'green peppers']...
-  ['onions', 'pineapple']
-]
-  
-  element_2 = []
-  row_index = 0
-    while row_index < array_1.count do
-      element_index = 0
-      element_1 = []
-    while element_index < array_1[row_index].count do
-      if array_1[row_index][element_index][0][0]
-      element_1 << array_1[row_index][element_index]
-    end
-    element_index += 1
-  end
-  element_2 << element_1
-  row_index += 1
-end
- 
-element_2
 
-puts "I love #{element_1} and #{element_2} on my pizza"
- 
-  # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
+def join_ingredients(src)
+
+  new_array = []
+  row_index = 0
+  while row_index < src.count do 
+  
+  new_array << "I love #{src[row_index][0]} and #{src[row_index][1]} on my pizza"
+    row_index += 1 
+  end
+  return new_array
+
+# Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
   # Build a new Array that contains strings where each pair of foods is
   # inserted into this template:
@@ -32,8 +18,21 @@ puts "I love #{element_1} and #{element_2} on my pizza"
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
 end
+require 'pry'
 
 def find_greater_pair(src)
+  
+  larger_num =[]
+    row_index = 0 
+    while row_index < src.count do 
+      if src[row_index][0] > src[row_index[1]]
+        puts src[row_index][0]
+      else
+        puts src[row_index][1]
+      end
+    row_index += 1 
+  end
+  return larger_num << src[row_index]
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
