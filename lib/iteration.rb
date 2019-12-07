@@ -24,7 +24,8 @@ while row_index < join_ingredients.count do
 end
 
 outer_results #=>[["I love salt and pepper on my pizza"]]
-    
+ 
+ 
 
 
   # Build a new Array that contains strings where each pair of foods is
