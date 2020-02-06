@@ -4,12 +4,12 @@ src = [
   ["onions","pineapple"]
 ]
 
- src_inner = []
- src_outer = []
+ 
    
 
-def join_ingredients(src,src_inner,src_outer)
-  
+def join_ingredients(src)
+  src_inner = []
+  src_outer = []
   row_index = 0
 while row_index < src.count do
   element_index = 0
@@ -34,7 +34,7 @@ while row_index < src_outer.count do
 #end
 
 
-puts join_ingredients(src,src_inner,src_outer)
+#puts join_ingredients(src)
 
 
 
