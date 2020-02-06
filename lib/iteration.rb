@@ -1,24 +1,41 @@
 src = [
-  ["Pepperoni","Cheese"],
-  ["Peppers","Onions"],
-  ["Olives","Spinach"]
+  ["pepperoni","sausage"],
+  ["green olives","green peppers"],
+  ["onions","pineapple"]
 ]
 
-def join_ingredients(src)
-    
+ src_inner = []
+ src_outer = []
+   
+
+def join_ingredients(src,src_inner,src_outer)
+  
   row_index = 0
 while row_index < src.count do
   element_index = 0
-  #while element_index < 
-  #src[row_index].count do
-    puts " I love #{src[row_index][element_index]} and #{src[row_index][element_index + 1]} on my pizza"
+  
+  while element_index <
+  src.count do
     
-    element_index += 1
-  end
-  row_index += 1
-end 
-    
-puts join_ingredients(src)
+  src_inner <<  src[row_index]
+end
+  element_index +=1
+end
+  src_outer << src_inner[row_index]
+  row_index +=1 
+end
+row_index = 0
+while row_index < src_outer.count do
+ puts "I love #{src_outer[row_index][element_index]} and #{src_outer[row_index][element_index + 1]} on my pizza"
+ end
+    #element_index += 1
+  #row_index += 1
+  #end
+#end
+
+
+puts join_ingredients(src,src_inner,src_outer)
+
 
 
 
