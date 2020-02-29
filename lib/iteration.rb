@@ -45,11 +45,13 @@ def total_even_pairs(src)
   # the number was even. Review the operator documentation if you've forgotten
   # this!
   
-   total = []
+   total = 0
    src.each do |num|
-    if #{num[0].even?}  #{num[1].even}
-    total  << num + num
+    if num[0] % 2 == 0 && num[1] % 2 == 0
+      total += num[0] + num[1]
+    end
+      
 end
 total
 end
-end
+
