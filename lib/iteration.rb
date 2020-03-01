@@ -3,15 +3,25 @@ def join_ingredients(src)
   #
   # Build a new Array that contains strings where each pair of foods is
   # inserted into this template:
-  #
+  array_of_strings = []
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
+  for array in src
+    array_of_strings << "I love #{array[0]} and #{array[1]} on my pizza"
+  end
+  return array_of_strings
 end
 
 def find_greater_pair(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
+  new_array = []
+
+  src.each { |array|
+    array[0] > array[1]? new_array << array[0] : new_array << array[1]
+  }
+ return new_array
 end
 
 def total_even_pairs(src)
@@ -22,4 +32,12 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+ total = 0
+ src.each { |array|
+   if array[0] % 2 == 0 && array[1] % 2 == 0
+     total += array[0] + array[1]
+   end
+  }
+  return total
+
 end
